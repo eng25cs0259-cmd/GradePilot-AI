@@ -74,7 +74,7 @@ const calculateWithBackend = async () => {
   setBackendResult(null);
 
   try {
-    const response = await fetch("http://localhost:5000/api/calculate", {
+    const response = await fetch("/api/calculate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const askAdvisor = async () => {
   setAdvisorAnswer("Analyzing your academic performance...");
 
   try {
-    const response = await fetch("http://localhost:5000/api/advisor", {
+    const response = await fetch("/api/advisor", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
