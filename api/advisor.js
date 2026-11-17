@@ -10,7 +10,7 @@ const gradePoints = {
   F: 0,
 };
 
-module.exports = (req, res) => {
+export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -58,4 +58,4 @@ module.exports = (req, res) => {
     source: "fallback-engine",
     answer,
   });
-};
+}
